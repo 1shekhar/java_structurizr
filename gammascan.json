@@ -1,23 +1,87 @@
 {
-	"gammaAccess": {
-		"url": "http://192.168.3.33:3000",
-		"userName": "nilesh.virkar@acellere.com",
-		"password": "gamma12345"
-	},
-	"repositories": [{
-		"repository": {
-			"uid": "e3e6251eb557761442972e67700c9e0e",
-			"projectName": "TC_java_structurizr",
-			"sources": {
-				"baseDir": "$WORKSPACE"
-			}
-		},
-		"dataDir": "$GAMMA_DATA",
-		"modules": {
-			"codeissues": [
-					{
-						"name": "pmd"
-					}]
-		}
-	}]
+    "gammaAccess": {
+        "url": "http://192.168.2.236:3000",
+        "userName": "windows@embold.io",
+        "password": "admin1234"
+    },
+    "repositories": [
+        {
+            "dataDir": "$GAMMA_DATA",
+            "repository": {
+                "uid": "4b210a59090df636a30ced6ae3d4ca36",
+                "projectName": "teamcity-structurizr",
+                "languages": [
+                    "JAVA"
+                ],
+                "sources": {
+                    "baseDir": "$WORKSPACE",
+                    "exclusions": []
+                }
+            },
+            "settings": {
+                "additionalOptions": [],
+                "includePaths": []
+            },
+            "modules": {
+                "relevance": [
+                    {
+                        "name": "relevance",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    }
+                ],
+                "codeissues": [
+                    {
+                        "name": "gamma_java",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "pmd",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "javaVersion",
+                                    "type": "text",
+                                    "value": "1.8",
+                                    "required": false
+                                },
+                                {
+                                    "name": "ruleSets",
+                                    "type": "text",
+                                    "value": "rulesets/java/strictexception.xml,rulesets/java/basic.xml,rulesets/java/design.xml",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "unittest": [
+                    {
+                        "name": "junit",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
 }
