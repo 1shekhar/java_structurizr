@@ -1,6 +1,6 @@
 {
     "gammaAccess": {
-        "url": "http://192.168.2.236:3000",
+        "url": "http://192.168.2.24:3000",
         "userName": "windows@embold.io",
         "password": "admin1234"
     },
@@ -8,7 +8,7 @@
         {
             "dataDir": "$GAMMA_DATA",
             "repository": {
-                "uid": "4b210a59090df636a30ced6ae3d4ca36",
+                "uid": "3b28b78c06cb5a83ae66a9d70191feb4",
                 "projectName": "teamcity-structurizr",
                 "languages": [
                     "JAVA"
